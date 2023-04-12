@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp'
 import { AuthContextProvider } from './context/AuthContext'
 import Account from './pages/Account'
 import ProtectedRoute from './components/ProtectedRoute'
+import MovieDetail from './pages/MovieDetail'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/' element={<Home/>} />
         <Route path='/signin' element={<SignIn/>} />
         <Route path='/signup' element={<SignUp/>} />
+        <Route path='/movie/:id' element={<MovieDetail/>} />
         <Route path='/account' element={
         <ProtectedRoute>
           <Account/>
